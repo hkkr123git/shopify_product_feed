@@ -1,0 +1,92 @@
+.add-feed-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    .column {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 0px 15px;
+        position: relative;
+        &.product-list {
+            .title {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+            .empty-msg {
+                font-size: 12px;
+                color: #999;
+            }
+        }
+        button {
+            margin-top: 13px;
+            padding: 5px 20px;
+            background: #6060af;
+            color: #fff;
+            border: 1px solid #54546f;
+            font-weight: 400;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        .color-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: 80%;
+            span.main-title {
+                font-size: 12px;
+            }
+            .group-input {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                margin-top: 10px;
+                &.right {
+                    justify-content: flex-end;
+                }
+                span {
+                    font-size: 9px;    
+                    display: flex;
+                    margin-right: 10px;
+                }
+            }
+        }
+        .list-item {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            padding: 5px;
+            background: #f6f6f6;
+            margin-bottom: 2px;
+            img {
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+            }
+            span {
+                font-size: 12px;
+            }
+            label {
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 10px;
+                height: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+            }
+        }
+    }
+}
