@@ -121,46 +121,51 @@ export default class AddFeed extends React.Component {
     }
     onSaveProduct() {
         const { productList, productName, tags, salePrice, mrp, itemCost, size, black, white, red, charcoalGrey, goldenYellow, lightPink, melangeGrey, navyBlue, oliveGreen, royalBlue, skyBlue } = this.state;
-        productList.push({
-            "product_name": productName,
-            "colorsImageMap": {
-                "BLACK": black,
-                "WHITE": white,
-                "RED": red,
-                "ROYAL BLUE": royalBlue,
-                "CHARCOAL GREY": charcoalGrey,
-                "MELANGE GREY": melangeGrey,
-                "NAVY BLUE": navyBlue,
-                "OLIVE GREEN": oliveGreen,
-                "GOLDEN YELLOW": goldenYellow,
-                "SKY BLUE": skyBlue,
-                "LIGHT PINK": lightPink
-            },
-            "tags": tags,
-            "sale_price": salePrice,
-            "mrp": mrp,
-            "item_cost": itemCost,
-            "size": size
-        });
-        this.setState({
-            productName: '',
-            tags: '',
-            salePrice: '',
-            mrp: '',
-            itemCost: '',
-            size: ["S","M","L","XL","XXL","3XL"],
-            black: '',
-            white: '',
-            red: '',
-            royalBlue: '',
-            charcoalGrey: '',
-            melangeGrey: '',
-            navyBlue: '',
-            oliveGreen: '',
-            goldenYellow: '',
-            skyBlue: '',
-            lightPink: '',
-            productList
-        });
+        if (productName) {
+            productList.push({
+                "product_name": productName,
+                "colorsImageMap": {
+                    "BLACK": black,
+                    "WHITE": white,
+                    "RED": red,
+                    "ROYAL BLUE": royalBlue,
+                    "CHARCOAL GREY": charcoalGrey,
+                    "MELANGE GREY": melangeGrey,
+                    "NAVY BLUE": navyBlue,
+                    "OLIVE GREEN": oliveGreen,
+                    "GOLDEN YELLOW": goldenYellow,
+                    "SKY BLUE": skyBlue,
+                    "LIGHT PINK": lightPink
+                },
+                "tags": tags,
+                "sale_price": salePrice,
+                "mrp": mrp,
+                "item_cost": itemCost,
+                "size": size
+            });
+            this.setState({
+                productName: '',
+                tags: '',
+                salePrice: '',
+                mrp: '',
+                itemCost: '',
+                size: ["S","M","L","XL","XXL","3XL"],
+                black: '',
+                white: '',
+                red: '',
+                royalBlue: '',
+                charcoalGrey: '',
+                melangeGrey: '',
+                navyBlue: '',
+                oliveGreen: '',
+                goldenYellow: '',
+                skyBlue: '',
+                lightPink: '',
+                productList
+            });
+        } else {
+            alert('Please enter product name');
+        }
+        
     }
 }

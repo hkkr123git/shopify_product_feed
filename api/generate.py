@@ -5,28 +5,43 @@ from flask import Flask, jsonify, request, send_file
 print(csv.__file__)
 
 
+def get_product_images(color_map):
+	product_main_images = {}
+	image_index = 0
+	for colorItem in color_map:
+		if color_map[colorItem]:
+			product_main_images[image_index] = color_map[colorItem]
+			image_index = image_index+1
+
+	return product_main_images
+
+
+def get_product_image_pos(color_map):
+	product_main_images_index = {}
+	image_index = 0
+	for colorItem in color_map:
+		if color_map[colorItem]:
+			product_main_images_index[image_index] = image_index+1
+			image_index = image_index + 1
+
+	return ''
+
+
 def get_csv(request):
 	print('generating...')
-	print(request)
 	for item in request:
-		PRODUCT_NAME = 'GRADIENT_HALF_SLEAVE_COTTON_TSHIRT'
+		PRODUCT_NAME = item["product_name"]
 		NORMALIZED_TITLE = PRODUCT_NAME.replace('_', ' ').title().split("Half", 1)
 		TITLE = "| Half".join(NORMALIZED_TITLE)
-		#TITLE = 'SYLLABARY | Half Sleeve Cotton TShirt'
-		COLORS = {
-			'BLACK': 'https://cdn.shopify.com/s/files/1/0360/3693/5813/files/GRADIENT_HALF_SLEAVE_COTTON_TSHIRT_BLACK.jpg?v=1586252792',
-			'RED': 'https://cdn.shopify.com/s/files/1/0360/3693/5813/files/GRADIENT_HALF_SLEAVE_COTTON_TSHIRT_RED.jpg?v=1586252791',
-			'WHITE': 'https://cdn.shopify.com/s/files/1/0360/3693/5813/files/GRADIENT_HALF_SLEAVE_COTTON_TSHIRT_WHITE.jpg?v=1586252791',
-			'ROYAL BLUE': 'https://cdn.shopify.com/s/files/1/0360/3693/5813/files/GRADIENT_HALF_SLEAVE_COTTON_TSHIRT_ROYAL_BLUE.jpg?v=1586252791'
-		}
+		COLORS = item["colorsImageMap"]
 
-		TAGS = "abstract, men, premium, printed, short sleeve, S, M, L, XL, XXL, 3XL"
+		# TAGS = "abstract, men, premium, printed, short sleeve, S, M, L, XL, XXL, 3XL"
+		TAGS = item["tags"]
 
-
-		SIZE = ['S', 'M', 'L', 'XL', 'XXL', '3XL']
-		SALE_PRICE = "599"
-		MRP = "699"
-		ITEM_COST = "480"
+		SIZE = item["size"]
+		SALE_PRICE = item["sale_price"]
+		MRP = item["mrp"]
+		ITEM_COST = item["item_cost"]
 		HANDLE = PRODUCT_NAME.replace('_', '-').lower()
 
 		option_size_values = {}
@@ -37,15 +52,14 @@ def get_csv(request):
 		sizeIndex = 0
 		colorIndex = 0
 		for sizeValue in SIZE:
-		    for colorValue in COLORS:
-		    	option_size_values[colorIndex] = sizeValue
-		    	option_color_values[colorIndex] = colorValue
-		    	variant_images[colorIndex] = COLORS[colorValue]
-		    	if len(product_images) != len(COLORS):
-		    		product_images[colorIndex] = COLORS[colorValue]
-		    		product_image_pos[colorIndex] = colorIndex+1
-
-		    	colorIndex = colorIndex+1
+			for colorValue in COLORS:
+				if COLORS[colorValue]:
+					option_size_values[colorIndex] = sizeValue
+					option_color_values[colorIndex] = colorValue
+					variant_images[colorIndex] = COLORS[colorValue]
+					colorIndex = colorIndex + 1
+					product_images = get_product_images(COLORS)
+					product_image_pos = get_product_image_pos(COLORS)
 
 		main_product_json = {
 			"handle": HANDLE,
@@ -99,7 +113,8 @@ def get_csv(request):
 		df = pd.read_json(json.dumps(main_product_json))
 		df.to_csv('output/1.csv', mode='a', header=False, index=False, line_terminator="\n")
 
-	path = "output/1.csv"
+	path = "output/feed.csv"
+	# return path
 	return send_file(path, as_attachment=True)
 
 
