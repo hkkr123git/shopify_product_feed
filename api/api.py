@@ -1,7 +1,10 @@
 from flask import Flask, jsonify, request
 from generate import get_csv
+from flask_cors import CORS
+
 app = Flask(__name__)
 app.config["DEBUG"] = True
+CORS(app)
 
 
 @app.route('/api/feed', methods=['POST'])

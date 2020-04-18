@@ -111,7 +111,7 @@ def get_csv(request):
 		}
 
 		df = pd.read_json(json.dumps(main_product_json))
-		df.to_csv('output/1.csv', mode='a', header=False, index=False, line_terminator="\n")
+		df.to_csv('output/feed.csv', mode='a', header=False, index=False, line_terminator="\n")
 
 	path = "output/feed.csv"
 	# return path

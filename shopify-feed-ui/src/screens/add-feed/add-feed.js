@@ -19,7 +19,7 @@ export default class AddFeed extends React.Component {
         goldenYellow: '',
         skyBlue: '',
         lightPink: '',
-        productList: []
+        productList: [{"product_name":"pro1","colorsImageMap":{"BLACK":"color1","WHITE":"","RED":"color2","ROYAL BLUE":"","CHARCOAL GREY":"","MELANGE GREY":"","NAVY BLUE":"","OLIVE GREEN":"","GOLDEN YELLOW":"","SKY BLUE":"","LIGHT PINK":""},"tags":"t1, t2, t3","sale_price":"123","mrp":"12","item_cost":"1","size":["S","M","L","XL","XXL","3XL"]},{"product_name":"pro2","colorsImageMap":{"BLACK":"","WHITE":"","RED":"","ROYAL BLUE":"color1","CHARCOAL GREY":"","MELANGE GREY":"color3","NAVY BLUE":"","OLIVE GREEN":"","GOLDEN YELLOW":"","SKY BLUE":"","LIGHT PINK":""},"tags":"t4, t5,t6","sale_price":"456","mrp":"45","item_cost":"4","size":["S","M","L","XL","XXL","3XL"]}]
     };
     changeFields(label, event) {
         const obj = {};
@@ -117,7 +117,25 @@ export default class AddFeed extends React.Component {
         this.setState({productList});
     }
     onDownloadFeed() {
-
+        const headers = {};
+        headers["Content-Type"] = "application/json";
+        headers["Accept"] = "application/json";
+        fetch('http://localhost:5000/api/feed', {
+            method: 'POST',
+            headers: headers,
+            body: JSON.stringify(this.state.productList)
+        }).then((response) => {
+            return response.blob();
+        }).then((blob) => {
+            var url = window.URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = "feed.csv";
+            document.body.appendChild(a); // we need to append the element to the dom -> otherwise it will not work in firefox
+            a.click();    
+            a.remove();  //afterwards we remove the element again    
+            this.setState({productList: []});
+        });
     }
     onSaveProduct() {
         const { productList, productName, tags, salePrice, mrp, itemCost, size, black, white, red, charcoalGrey, goldenYellow, lightPink, melangeGrey, navyBlue, oliveGreen, royalBlue, skyBlue } = this.state;

@@ -1,1 +1,49 @@
 Handle,Title,Body (HTML),Vendor,Type,Tags,Published,Option1 Name,Option1 Value,Option2 Name,Option2 Value,Option3 Name,Option3 Value,Variant SKU,Variant Grams,Variant Inventory Tracker,Variant Inventory Policy,Variant Fulfillment Service,Variant Price,Variant Compare At Price,Variant Requires Shipping,Variant Taxable,Variant Barcode,Image Src,Image Position,Image Alt Text,Gift Card,SEO Title,SEO Description,Google Shopping / Google Product Category,Google Shopping / Gender,Google Shopping / Age Group,Google Shopping / MPN,Google Shopping / AdWords Grouping,Google Shopping / AdWords Labels,Google Shopping / Condition,Google Shopping / Custom Product,Google Shopping / Custom Label 0,Google Shopping / Custom Label 1,Google Shopping / Custom Label 2,Google Shopping / Custom Label 3,Google Shopping / Custom Label 4,Variant Image,Variant Weight Unit,Variant Tax Code,Cost per item
+pro1,Pro1,,echell,TShirt,"t1, t2, t3",TRUE,Size,S,Color,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,color1,,,FALSE,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,S,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,color2,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,M,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,M,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,L,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,L,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,XL,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,XL,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,XXL,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,XXL,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,3XL,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,3XL,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro2,Pro2,,echell,TShirt,"t4, t5,t6",TRUE,Size,S,Color,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,color1,,,FALSE,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,S,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,color3,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,M,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,M,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,L,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,L,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,XL,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,XL,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,XXL,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,XXL,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,3XL,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,3XL,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro1,Pro1,,echell,TShirt,"t1, t2, t3",TRUE,Size,S,Color,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,color1,,,FALSE,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,S,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,color2,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,M,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,M,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,L,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,L,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,XL,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,XL,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,XXL,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,XXL,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro1,,,,,,,,3XL,,BLACK,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,1
+pro1,,,,,,,,3XL,,RED,,,,100,shopify,continue,manual,123,12,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color2,g,,1
+pro2,Pro2,,echell,TShirt,"t4, t5,t6",TRUE,Size,S,Color,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,color1,,,FALSE,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,S,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,color3,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,M,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,M,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,L,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,L,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,XL,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,XL,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,XXL,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,XXL,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
+pro2,,,,,,,,3XL,,ROYAL BLUE,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color1,g,,4
+pro2,,,,,,,,3XL,,MELANGE GREY,,,,100,shopify,continue,manual,456,45,TRUE,TRUE,,,,,,,,,,,,,,,,,,,,,color3,g,,4
