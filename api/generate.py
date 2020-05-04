@@ -1,6 +1,8 @@
 import csv
 import pandas as pd
 import json
+import random
+from shutil import copyfile
 from flask import Flask, jsonify, request, send_file
 print(csv.__file__)
 
@@ -18,25 +20,45 @@ def get_product_images(color_map):
 
 def get_product_image_pos(color_map):
 	product_main_images_index = {}
+	img_pos_array = []
 	image_index = 0
 	for colorItem in color_map:
 		if color_map[colorItem]:
-			product_main_images_index[image_index] = image_index+1
-			image_index = image_index + 1
+			img_pos_array.append(image_index)
+			image_index = image_index+1
 
-	return ''
+	random.shuffle(img_pos_array)
+	image_index = 0
+	for i in img_pos_array:
+		product_main_images_index[image_index] = i
+		image_index = image_index+1
+
+	return product_main_images_index
+
+
+def get_tags(item):
+	product_tags = item["tags"]
+	size_tags = ','.join(item["size"])
+	color_tag_array = []
+	for colorItem in item["colorsImageMap"]:
+		if item["colorsImageMap"][colorItem]:
+			color_tag_array.append(colorItem)
+
+	color_tags = ",".join(color_tag_array)
+	return product_tags+','+size_tags+','+color_tags
 
 
 def get_csv(request):
 	print('generating...')
+	copyfile("output/feed.csv", "output/feed_cp.csv")
 	for item in request:
 		PRODUCT_NAME = item["product_name"]
-		NORMALIZED_TITLE = PRODUCT_NAME.replace('_', ' ').title().split("Half", 1)
-		TITLE = "| Half".join(NORMALIZED_TITLE)
+		NORMALIZED_TITLE = PRODUCT_NAME.replace('_', ' ').title().split("Printed", 1)
+		TITLE = "| Printed".join(NORMALIZED_TITLE)
 		COLORS = item["colorsImageMap"]
 
 		# TAGS = "abstract, men, premium, printed, short sleeve, S, M, L, XL, XXL, 3XL"
-		TAGS = item["tags"]
+		TAGS = get_tags(item)
 
 		SIZE = item["size"]
 		SALE_PRICE = item["sale_price"]
@@ -111,9 +133,9 @@ def get_csv(request):
 		}
 
 		df = pd.read_json(json.dumps(main_product_json))
-		df.to_csv('output/feed.csv', mode='a', header=False, index=False, line_terminator="\n")
+		df.to_csv('output/feed_cp.csv', mode='a', header=False, index=False, line_terminator="\n")
 
-	path = "output/feed.csv"
+	path = "output/feed_cp.csv"
 	# return path
 	return send_file(path, as_attachment=True)
 
